@@ -1,0 +1,7 @@
+{
+    "myKey": "en translation",
+    "nested": {
+      "key": "nested en translation"
+    },
+    "myTemplate": "{{count}} times"
+  }
