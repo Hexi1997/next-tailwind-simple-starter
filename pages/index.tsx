@@ -12,7 +12,6 @@ export default function Home() {
       <p className="text-sm text-themeGreen">{t('myKey')}</p>
       <p>{t('nested.key')}</p>
       <p className={cn(styles.redText)}>{t('myTemplate', { count: 100 })}</p>
-
       <LanguageSwitcher lang="cn">切换到中文</LanguageSwitcher>
       <br />
       <LanguageSwitcher lang="en">切换到英文</LanguageSwitcher>
