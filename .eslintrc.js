@@ -5,7 +5,6 @@ module.exports = {
     requireConfigFile: false,
     project: require.resolve('./tsconfig.json')
   },
-  parser: '@babel/eslint-parser',
   rules: {
     'unicorn/filename-case': 'off',
     'import/order': 'off',

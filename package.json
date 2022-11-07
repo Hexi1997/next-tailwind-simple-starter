@@ -9,7 +9,6 @@
     "export": "next build && next export",
     "prepare": "husky install",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "eslint -c ./.eslintrc.js --ext .ts,.tsx,.js,.jsx",
     "pre-commit": "lint-staged"
   },
   "dependencies": {
@@ -44,7 +43,7 @@
   "lint-staged": {
     "**/*.{less,css,sass,scss}": "stylelint",
     "**/*.{js,jsx,ts,tsx}": [
-      "yarn lint"
+      "eslint -c ./.eslintrc.js --ext .ts,.tsx,.js,.jsx"
     ]
   }
 }

@@ -12,18 +12,12 @@
   ],
   "prettier.configPath": ".prettierrc.js",
   "stylelint.enable": true,
-  "[scss]": {
-    "editor.formatOnSave": true,
-  },
-  "[sass]": {
+  "[css]": {
     "editor.formatOnSave": true,
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
   },
-  // "eslint.options": {
-  //   ​"extensions": [".js", ".jsx", ".vue", ".ts", ".tsx"]
-  // },
   "blueprint.templatesPath": [
     ".vscode/blueprint-templates",
   ]
