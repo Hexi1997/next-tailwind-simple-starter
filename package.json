@@ -41,9 +41,9 @@
     ]
   },
   "lint-staged": {
-    "**/*.{less,css,sass,scss}": "stylelint",
+    "**/*.{css}": "stylelint",
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint -c ./.eslintrc.js --ext .ts,.tsx,.js,.jsx"
+      "eslint"
     ]
   }
 }
