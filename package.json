@@ -6,19 +6,45 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "prepare": "husky install",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "eslint -c ./.eslintrc.js --ext .ts,.tsx,.js,.jsx",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.2",
     "next": "13.0.2",
     "next-export-i18n": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.8.4"
+  },
+  "devDependencies": {
+    "@white-matrix/eslint-config": "^1.2.6",
+    "@white-matrix/prettier-config": "^1.1.2",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.18",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "stylelint": "^14.14.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-prettier": "^2.0.0",
+    "tailwindcss": "^3.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{less,css,sass,scss}": "stylelint",
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn lint"
+    ]
   }
 }
