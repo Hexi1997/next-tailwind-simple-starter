@@ -47,8 +47,5 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint"
     ]
-  },
-  "engines": {
-    "node": "16.10.0"
   }
 }
